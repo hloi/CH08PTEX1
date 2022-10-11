@@ -13,15 +13,16 @@ public:
     IntNode(int dataInit = 0, IntNode* nextLoc = nullptr);
     void insertAfter(IntNode* nodeLoc);
     void deleteNode(IntNode* node);
-
+    int getDataVal() const;
     IntNode* getNextNodePt() const;
+    void setNextNodePt(IntNode* node);
     void PrintNodeData();
 
 private:
     int dataVal;
     IntNode* nextNodePt;
-public:
-    int getDataVal() const;
+
+
 
 };
 

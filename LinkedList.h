@@ -11,18 +11,47 @@ class LinkedList {
     LinkedList() {
         head = nullptr;
         tail = head;
+        numItems = 0;
+
     }
 
-    void insert(IntNode* node) {
+    void push_front(IntNode* node) {
         if (head == nullptr) {
             head = node;
+            tail = head;
         }
+        else {
+            node->setNextNodePt(head);
+            head = node;
+        }
+        numItems++;
     }
+
+    void push_back(IntNode* node) {
+        if (head == nullptr) {
+            head = node;
+            tail = head;
+        }
+        else {
+            tail->setNextNodePt(node);
+            tail = node;
+        }
+        numItems++;
+    }
+
+    void insert(int pos, IntNode* node) {
+
+    }
+
+    void deleteNode(int pos);
+
+    int find(int val);
+
 
 private:
     IntNode* head;
     IntNode* tail;
-
+    int numItems;
 };
 
 

@@ -37,3 +37,7 @@ void IntNode::deleteNode(IntNode *node) {
 
 
 }
+
+void IntNode::setNextNodePt(IntNode *node) {
+    this->nextNodePt = node;
+}
